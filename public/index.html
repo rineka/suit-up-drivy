@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
+	<link href="index.css" rel="stylesheet" type="text/css">
     <title>CSS/HTML Workshop with Drivy</title>
+	<div id="content">
+		<div class="centercolumn">
+			<h1>Details of location</h1>
+		</div>
+	</div>
   </head>
+
   <body>
     <div id="car">
+	  <li>Choice of car : </li>
       <input class="model" type="text" placeholder="Car model"/>
+	  <li> Price by day : </li>
       <input class="price-by-day" type="number" placeholder="Price by day"/>
+	  <li> Price by km : </li>
       <input class="price-by-km" type="number" placeholder="Price by km"/>
     </div>
     <div id="rental">
+	  <li>Date of location : </li>
+	  <text>Begin : </text>
       <input class="begin" type="date" placeholder="Rental begin date"/>
+	  <text>End : </text>
       <input class="end" type="date" placeholder="Rental end date"/>
+	  <li>Distance in km :</li>
       <input class="distance" type="number" placeholder="Distance in km"/>
+	  <text>option : </text>
       <input class="option" type="checkbox" placeholder="Deductible option"/>
     </div>
     <button id="compute">Compute</button>
     <div id="actors"></div>
     <script id="template" type="x-tmpl-mustache">
+		<text1> Resultats : </text1>
       {{#actors}}
         <div class="actor">
+		  
           <span>{{who}}</span>
           <span>{{type}}</span>
           <span>{{amount}}</span>
